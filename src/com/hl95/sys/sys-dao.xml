@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-autowire="byName" >
+    <bean id="sysMenuDao" class="com.hl95.sys.dao.SysMenuDao"></bean>
+    <bean id="sysCompanyDao" class="com.hl95.sys.dao.SysCompanyDao"></bean>
+    <bean id="sysMasterCodeDao" class="com.hl95.sys.dao.SysMasterCodeDao" ></bean> 
+    <bean id="sysDepartmentDao" class="com.hl95.sys.dao.SysDepartmentDao"></bean> 
+    <bean id="sysRoleDao" class="com.hl95.sys.dao.SysRoleDao"></bean>
+    <bean id="sysRoleParentDao" class="com.hl95.sys.dao.SysRoleParentDao"></bean>
+    <bean id="sysEmployeeDao" class="com.hl95.sys.dao.SysEmployeeDao"></bean>
+    <bean id="sysPermissionDao" class="com.hl95.sys.dao.SysPermissionDao"></bean>
+    <bean id="sysAdminDao" class="com.hl95.sys.dao.SysAdminDao"></bean>
+   
+    <bean id="sysLogDao" class="com.hl95.sys.dao.SysLogDao"></bean>
+    <bean id="sysLanguageDao" class="com.hl95.sys.dao.SysLanguageDao"></bean>
+    <bean id="sysEmployeeInfoDao" class="com.hl95.sys.dao.SysEmployeeInfoDao"></bean>
+    <bean id="sysDeptRoleDao" class="com.hl95.sys.dao.SysDeptRoleDao"></bean>
+    <bean id="sysSetDeptDao" class="com.hl95.sys.dao.SysSetDeptDao"></bean>
+	
+
+</beans>

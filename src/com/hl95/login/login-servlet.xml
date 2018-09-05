@@ -1,0 +1,59 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+
+<xwork>
+
+	<package name="login" extends="business-default" namespace="/login">
+		<action name="index"
+			class="com.hl95.login.action.IndexAction">
+			<result name="success"  type="redirect">
+				/view/intranet.html?1_link
+			</result>
+			<result name="reSuc"  type="redirect">
+				/view/intranetEx.html?1_link
+			</result>
+			<result name="loginPage">
+				<!-- /view/logblank.jsp -->
+				<!-- /view/login.html -->
+				/view/login.html
+			</result>
+			<result name="swLanguage" type="redirect">
+				/login/index.dhtml
+			</result>
+			<result name="firstSetPwd" >
+				/view/ess/firstSetPwd.jsp
+			</result>
+		</action>
+		<action name="login"
+			class="com.hl95.login.action.LoginAction">
+			<result name="validatePass">
+				/view/progress.html
+			</result>
+			<result name="success" type="redirect">
+				/login/index.dhtml
+			</result>
+			<result name="successSave" type="redirect">
+				/view/progress.html?account=${sysAdmin.account}
+			</result>
+			<result name="input">
+				<!-- /view/logblank.jsp -->
+				<!-- /view/login.html -->
+				/view/login.html
+			</result>
+			<result name="logout" type="redirect">
+				<!-- /view/login.html -->
+				/view/login.html
+			</result>
+			<result name="cc">
+				/view/sub/createSub.jsp
+			</result>
+		</action>
+	</package>
+
+
+
+</xwork>
+
+<!-- END SNIPPET: xworkSample -->
+

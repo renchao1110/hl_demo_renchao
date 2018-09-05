@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "/WEB-INF/tld/log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<!-- console appender -->
+	<appender name="Console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out"/>
+		<param name="encoding" value="GBK"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%p [%C{1}:%M(%L)] %m%n" />
+		</layout>
+	</appender>
+
+	<!-- file appender for debug level -->
+	<appender name="FileDebug" class="org.apache.log4j.RollingFileAppender">
+		<param name="Encoding" value="UTF-8"/>
+		<param name="File" value="${catalina.base}/logs/95yunma_mana/debug.log" />
+		<param name="MaxFileSize" value="10240KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%C:%M()] %p [%m]%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelMatchFilter">
+			<param name="LevelToMatch" value="DEBUG" />
+			<param name="AcceptOnMatch" value="TRUE" />
+		</filter>
+		<filter class="org.apache.log4j.varia.DenyAllFilter" />
+	</appender>
+	
+	<!-- file appender for info level -->
+	<appender name="FileInfo" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Encoding" value="UTF-8"/>
+		<param name="File" value="${catalina.base}/logs/95yunma_mana/info.log" />
+		 <param name="DatePattern" value="'daily.'yyyy-MM-dd'.log'" />    
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%C:%M()] %p [%m]%n" />
+		</layout>
+	</appender>
+	
+	<!-- file appender for info warn -->
+	<appender name="FileWarn" class="org.apache.log4j.RollingFileAppender">
+		<param name="Encoding" value="UTF-8"/>
+		<param name="File" value="${catalina.base}/logs/95yunma_mana/warn.log" />
+		<param name="MaxFileSize" value="10240KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%C:%M()] %p [%m]%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelMatchFilter">
+			<param name="LevelToMatch" value="WARN" />
+			<param name="AcceptOnMatch" value="TRUE" />
+		</filter>
+		<filter class="org.apache.log4j.varia.DenyAllFilter" />
+	</appender>
+	
+	<!-- file appender for error level -->
+	<appender name="FileError" class="org.apache.log4j.RollingFileAppender">
+		<param name="Encoding" value="UTF-8"/>
+		<param name="File" value="${catalina.base}/logs/95yunma_mana/error.log" />
+		<param name="MaxFileSize" value="10240KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%C:%M()] %p [%m]%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelMatchFilter">
+			<param name="LevelToMatch" value="ERROR" />
+			<param name="AcceptOnMatch" value="TRUE" />
+		</filter>
+		<filter class="org.apache.log4j.varia.DenyAllFilter" />
+	</appender>
+	
+	<!-- crystal report file appender for error level -->
+	<appender name="CrystaldecisionsFileError" class="org.apache.log4j.RollingFileAppender">
+		<param name="Encoding" value="UTF-8"/>
+		<param name="File" value="${catalina.base}/logs/95yunma_mana/crystaldecisions_error.log" />
+		<param name="MaxFileSize" value="10240KB" />
+		<param name="MaxBackupIndex" value="100" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] [%C:%M()] %p [%m]%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelMatchFilter">
+			<param name="LevelToMatch" value="ERROR" />
+			<param name="AcceptOnMatch" value="TRUE" />
+		</filter>
+		<filter class="org.apache.log4j.varia.DenyAllFilter" />
+	</appender>
+	
+	<!-- root logger -->
+	<root>
+		<priority value="info" />
+		<appender-ref ref="Console" />
+		<appender-ref ref="FileDebug" />
+		<appender-ref ref="FileInfo" />
+		<appender-ref ref="FileWarn" />
+		<appender-ref ref="FileError" />
+	</root>
+	
+	<!-- project common logger 
+	<logger name="cn.com">
+		<level value="warn" />
+		<appender-ref ref="FileWarn" />
+		<appender-ref ref="FileError" />
+	</logger>
+	-->
+	<!-- project common logger 
+	<logger name="net.ait">
+		<level value="warn" />
+		<appender-ref ref="FileWarn" />
+		<appender-ref ref="FileError" />
+	</logger>
+	 -->
+	<!-- crystal report logger 
+	<logger name="com.crystaldecisions">
+		<level value="error" />
+		<appender-ref ref="CrystaldecisionsFileError" />
+	</logger>
+	-->
+	<!-- ibatis logger 
+	<logger name="com.ibatis">
+		<level value="warn" />
+		<appender-ref ref="FileError" />
+	</logger>
+	-->
+	<!-- spring logger 
+	<logger name="org.springframework">
+		<level value="warn" />
+		<appender-ref ref="FileWarn" />
+		<appender-ref ref="FileError" />
+	</logger>
+	-->
+	<!-- spring aop logger 
+	<logger name="org.springframework.aop.framework">
+		<level value="warn" />
+		<appender-ref ref="FileWarn" />
+		<appender-ref ref="FileError" />
+	</logger>
+	-->
+	<!-- hibernate logger 
+	<logger name="org.hibernate">
+		<level value="warn" />
+		<appender-ref ref="FileWarn" />
+		<appender-ref ref="FileError" />
+	</logger>
+	-->
+	<!-- hibernate sql logger	
+	<logger name="org.hibernate.SQL">
+		<level value="debug" />
+		<appender-ref ref="Console" />
+	</logger>
+ -->
+	<!-- hibernate type logger
+	<logger name="org.hibernate.type">
+		<level value="debug" />
+		<appender-ref ref="Console" />
+	</logger>
+	 -->
+</log4j:configuration>

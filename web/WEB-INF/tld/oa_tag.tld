@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<taglib>
+	<tlib-version>1.1.2</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>porxy</short-name>
+	<uri>intranet_tag</uri>
+	<description>Intranet Tag Library Descriptor</description>
+
+	<!-- leftmenu tag -->
+
+	<tag>
+		<name>leftMenuPermission</name>
+		<tag-class>
+			org.pj.framework.business.web.view.LeftMenuPermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>leftmenu tag</description>
+	</tag>
+	<tag>
+		<name>dateFormat</name>
+		<tag-class>
+			org.pj.framework.business.web.view.DateFormatTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>dateFormat tag</description>
+		<attribute>
+			<name>value</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>defCurrent</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>pattern</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+	<tag>
+		<name>writeHtml</name>
+		<tag-class>
+			org.pj.framework.business.web.view.WriteHtmlTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>createPermission</name>
+		<tag-class>
+			org.pj.framework.business.web.view.CreatePermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+	</tag>
+	<tag>
+		<name>editPermission</name>
+		<tag-class>
+			org.pj.framework.business.web.view.EditPermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+	</tag>
+	<tag>
+		<name>deletePermission</name>
+		<tag-class>
+			org.pj.framework.business.web.view.DeletePermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+	</tag>
+	<tag>
+		<name>notCreatePermission</name>
+		<tag-class>
+			org.pj.framework.business.web.view.NotCreatePermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+	</tag>
+	<tag>
+		<name>notEditPermission</name>
+		<tag-class>
+			org.pj.framework.business.web.view.NotEditPermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+	</tag>
+	<tag>
+		<name>notDeletePermission</name>
+		<tag-class>
+			org.pj.framework.business.web.view.NotDeletePermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+	</tag>
+	<tag>
+		<name>historyToolBar</name>
+		<tag-class>
+			org.pj.framework.business.web.view.HistoryToolBarTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>historyToolBar tag</description>
+	</tag>
+	
+	<tag>
+		<name>request</name>
+		<tag-class>
+			org.pj.framework.business.web.view.RequestSupport
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>RequestSupport tag</description>
+		<attribute>
+			<name>key</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>encodeUrl</name>
+		<tag-class>
+			org.pj.framework.business.web.view.ResponseEncodeUrl
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>ResponseEncodeUrl tag</description>
+		<attribute>
+			<name>url</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>strLengthSb</name>
+		<tag-class>
+			org.pj.framework.business.web.view.StringLengthUtil
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>StringLengthUtil tag</description>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>pagingUrl</name>
+		<tag-class>
+			org.pj.framework.business.web.view.PagingUrlUtil
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>PagingUrlUtil tag</description>
+		<attribute>
+			<name>url</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>action</name>
+			<required>true</required>
+		</attribute>
+		
+		<attribute>
+			<name>limit</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>startIndex</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>writeRemoveHtml</name>
+		<tag-class>
+			org.pj.framework.business.web.view.WriteRemoveHtmlTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeRemoveHtml tag</description>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>propertyI18n</name>
+		<tag-class>
+			org.pj.framework.business.web.view.PropertyI18nTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>propertyI18n tag</description>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>mailYn</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>contactYn</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>emptyStr</name>
+			<required>false</required>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>textI18n</name>
+		<tag-class>
+			org.pj.framework.business.web.view.TextI18nTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>TextI18n tag</description>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>imageI18n</name>
+		<tag-class>
+			org.pj.framework.business.web.view.ImageI18nTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>ImageI18n tag</description>
+		<attribute>
+			<name>id</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+	
+	<tag>
+		<name>rulePermissionReply</name>
+		<tag-class>
+			org.pj.framework.business.web.view.RuleReplyPermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+	</tag>
+	<tag>
+		<name>rulePermissionComment</name>
+		<tag-class>
+			org.pj.framework.business.web.view.RuleCommentPermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+	</tag>
+	
+	
+	<!-- 分页 -->
+	<tag>
+		<name>page</name>
+		<tagclass>org.pj.framework.business.web.view.PagingTag</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info> paging </info>
+		<attribute>
+			<name>link</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>parameters</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>total</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>currentpage</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>pagesize</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>beginlabel</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>endlabel</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>prevlabel</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>nextlabel</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>pagegroupsize</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>useJS</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>usePageGo</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+</taglib>

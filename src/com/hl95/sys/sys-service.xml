@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans default-autowire="byName">
+	<bean id="sysMenuService" parent="transactionService">
+		<property name="target">
+			<bean class="com.hl95.sys.service.SysMenuService" />
+		</property>
+	</bean>
+	
+	<bean id="sysCompanyService" parent="transactionService">
+		<property name="target">
+			<bean class="com.hl95.sys.service.SysCompanyService" />
+		</property>
+	</bean>
+	
+	<bean id="sysMasterCodeService" parent="transactionService">
+		<property name="target">
+			<bean class="com.hl95.sys.service.SysMasterCodeService" />
+		</property>
+	</bean>
+	
+	<bean id="sysDepartmentService" parent="transactionService">
+		<property name="target">
+			<bean class="com.hl95.sys.service.SysDepartmentService" />
+		</property>
+	</bean>
+	
+	
+	<bean id="sysRoleService" parent="transactionService">
+		<property name="target">
+			<bean class="com.hl95.sys.service.SysRoleService" />
+		</property>
+	</bean>
+	
+	<bean id="sysRoleParentService" parent="transactionService">
+		<property name="target">
+			<bean class="com.hl95.sys.service.SysRoleParentService" />
+		</property>
+	</bean>
+	
+	<bean id="sysEmployeeService" parent="transactionService">
+		<property name="target">
+			<bean class="com.hl95.sys.service.SysEmployeeService" />
+		</property>
+	</bean>
+	
+	<bean id="sysPermissionService" parent="transactionService">
+		<property name="target">
+			<bean class="com.hl95.sys.service.SysPermissionService" />
+		</property>
+	</bean>
+	
+	<bean id="sysAdminService" parent="transactionService">
+		<property name="target">
+			<bean class="com.hl95.sys.service.SysAdminService" />
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="sysLogService" parent="transactionService">
+		<property name="target">
+			<bean class="com.hl95.sys.service.SysLogService" />
+		</property>
+	</bean>
+	
+	<bean id="sysLanguageService" parent="transactionService">
+		<property name="target">
+			<bean class="com.hl95.sys.service.SysLanguageService" />
+		</property>
+	</bean>
+	
+	<bean id="sysEmployeeInfoService" parent="transactionService">
+		<property name="target">
+			<bean class="com.hl95.sys.service.SysEmployeeInfoService" />
+		</property>
+	</bean>
+	<bean id="sysDeptRoleService" parent="transactionService">
+		<property name="target">
+			<bean class="com.hl95.sys.service.SysDeptRoleService" />
+		</property>
+	</bean>
+	<bean id="sysSetDeptService" parent="transactionService">
+		<property name="target">
+			<bean class="com.hl95.sys.service.SysSetDeptService" />
+		</property>
+	</bean>
+	
+    
+</beans>

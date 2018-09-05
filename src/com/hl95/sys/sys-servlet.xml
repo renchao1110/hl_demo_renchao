@@ -1,0 +1,246 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<!-- START SNIPPET: xworkSample -->
+<xwork>
+	<package name="sys" extends="business-default" namespace="/sys">
+		<action name="menu"
+			class="com.hl95.sys.action.SysMenuAction">
+			<result name="success">
+				/view/sys/menu/menu.jsp
+			</result>
+			<result name="topMenuData">
+				/view/inc/top.jsp
+			</result>
+			<result name="leftMenuData">
+				/view/inc/left.jsp
+			</result>
+			<result name="display">
+				/view/sys/menu/menuDetail.jsp
+			</result>
+			<result name="view">
+				/view/sys/menu/editMenu.jsp
+			</result>
+			<result name="edit" type="redirect">
+				/sys/menu!display.dhtml?sysMenu.id=${sysMenu.id}
+			</result>
+			<result name="delete" type="redirect">
+				/sys/menu!display.dhtml?sysMenu.id=${sysMenu.id}
+			</result>
+		</action>
+		<action name="company"
+			class="com.hl95.sys.action.SysCompanyAction">
+			<result name="success">
+				/view/sys/company/company.jsp
+			</result>
+			<result name="show">
+				/view/sys/company/showCompany.jsp
+			</result>
+			<result name="view">
+				/view/sys/company/editCompany.jsp
+			</result>
+			<result name="delete" type="redirect">
+				/sys/company.dhtml
+			</result>
+			<result name="edit" type="redirect">
+				/sys/company.dhtml
+			</result>
+		</action>
+		<action name="masterCode"
+			class="com.hl95.sys.action.SysMasterCodeAction">
+			<result name="success">
+				/view/sys/masterCode/masterCode.jsp
+			</result>
+			<result name="display">
+				/view/sys/masterCode/masterCodeDetail.jsp
+			</result>
+			<result name="view">
+				/view/sys/masterCode/editMasterCode.jsp
+			</result>
+			<result name="edit" type="redirect">
+				/sys/masterCode!display.dhtml?sysMasterCode.id=${sysMasterCode.id}
+			</result>
+			<result name="delete" type="redirect">
+				/sys/masterCode!display.dhtml?sysMasterCode.id=${sysMasterCode.id}
+			</result>
+			<result name="importExcel">
+				/view/sys/masterCode/importExcel.jsp
+			</result>
+		</action>
+		
+		<action name="department"
+			class="com.hl95.sys.action.SysDepartmentAction">
+			<result name="success">
+				/view/sys/department/department.jsp
+			</result>
+			
+			<result name="rsuc">
+				/view/sys/department/departmentInfo.jsp
+			</result>
+			
+			<result name="display">
+				/view/sys/department/departmentDetail.jsp
+			</result>
+			
+			<result name="view">
+				/view/sys/department/editDepartment.jsp
+			</result>
+			
+			<result name="empView">
+				/view/sys/department/editEmpDepartment.jsp
+			</result>
+			
+			<result name="edit" type="redirect">
+				/sys/department!display.dhtml?sysDepartment.id=${sysDepartment.id}&amp;_msg=ereload
+			</result>
+			<result name="delete" type="redirect">
+				/sys/department!display.dhtml?sysDepartment.id=${sysDepartment.id}&amp;_msg=${_msg}
+			</result>
+			
+		</action>
+		
+		<action name="sdept"
+			class="com.hl95.sys.action.SysSetDeptAction">
+			<result name="success">
+				/view/sys/department/sdept.jsp
+			</result>
+			<result name="edit" type="redirect" >
+				/sys/sdept.dhtml?_msg=${_msg}&amp;_empId=${_eId}
+			</result>
+		</action>
+		
+		
+		
+		<action name="role"
+			class="com.hl95.sys.action.SysRoleAction">
+			<result name="success">
+				/view/sys/role/role.jsp
+			</result>
+			<result name="show">
+				/view/sys/role/showRole.jsp
+			</result>
+			<result name="view">
+				/view/sys/role/editRole.jsp
+			</result>
+			<result name="edit" type="redirect">
+				/sys/role.dhtml
+			</result>
+			<result name="delete" type="redirect">
+				/sys/role.dhtml
+			</result>
+			
+		</action>
+		
+		<action name="employee"
+			class="com.hl95.sys.action.SysEmployeeAction">
+			<result name="success">
+				/view/sys/employee/employee.jsp
+			</result>
+			<result name="show">
+				/view/sys/employee/showEmployee.jsp
+			</result>
+			<result name="showBySearch">
+				/view/showEmployee.jsp
+			</result>
+			<result name="view">
+				/view/sys/employee/editEmployee.jsp
+			</result>
+			<result name="edit" type="redirect">
+				/sys/employee.dhtml?start=${start}&amp;limit=${limit}&amp;_empId=${_empId}&amp;_empName=${_empName}&amp;_departmentName=${_departmentName}
+			</result>
+			<result name="delete" type="redirect">
+				/sys/employee.dhtml?start=${start}&amp;limit=${limit}&amp;_empId=${_empId}&amp;_empName=${_empName}&amp;_departmentName=${_departmentName}
+			</result>
+			<result name="openEmail" type="redirect">
+				/inf/email!view.dhtml?regEmpId=${sysEmployee.id}
+			</result>
+			<result name="empHomeList" >
+				/view/searchEmpResult.jsp
+			</result>
+			<result name="importEmployee" >
+				/view/sys/employee/import.jsp
+			</result>
+			<result name="importEmployeeDetail" >
+				/view/sys/employee/importEmpDetail.jsp
+			</result>
+		</action>
+		
+		<action name="permission"
+			class="com.hl95.sys.action.SysPermissionAction">
+			<result name="success">
+				/view/sys/permission/permission.jsp
+			</result>
+			<result name="show">
+				/view/sys/permission/showPermission.jsp
+			</result>
+			<result name="create">
+				/view/sys/permission/createPermission.jsp
+			</result>
+			<result name="creates">
+				/view/sys/permission/createPermissions.jsp
+			</result>
+			<result name="save" type="redirect">
+				/sys/permission.dhtml
+			</result>
+			<result name="edit" type="redirect">
+				/sys/permission.dhtml
+			</result>
+			<result name="saveOne" type="redirect">
+				/sys/permission.dhtml
+			</result>
+			<result name="delete" type="redirect">
+				/sys/permission.dhtml
+			</result>
+			<result name="view">
+				/view/sys/permission/updatePermission.jsp
+			</result>
+		</action>
+		
+		<action name="uadmin"
+			class="com.hl95.sys.action.SysAdminAction">
+			<result name="password">
+				/view/ess/password.jsp
+			</result>
+			<result name="editPassword">
+				/view/ess/password.jsp
+			</result>
+		</action>
+		
+		<action name="admin"
+			class="com.hl95.sys.action.SysAdminAction">
+			<result name="success">
+				/view/sys/admin/admin.jsp
+			</result>
+			<result name="show">
+				/view/sys/admin/showAdmin.jsp
+			</result>
+			<result name="view">
+				/view/sys/admin/editAdmin.jsp
+			</result>
+			<result name="edit" type="redirect">
+				/sys/admin.dhtml
+			</result>
+			<result name="delete" type="redirect">
+				/sys/admin.dhtml
+			</result>
+			<result name="resumePassword">
+				/view/sys/admin/resumePassword.jsp
+			</result>
+		</action>
+		<action name="log"
+			class="com.hl95.sys.action.SysLogAction">
+			<result name="success">
+				/view/sys/log/log.jsp
+			</result>
+		</action>
+		<action name="mainleft"
+			class="com.hl95.sys.action.MainLeftAction">
+			<result name="success">
+				/view/welcome.jsp
+			</result>
+			<result name="dwel">
+				/view/dwelcome.jsp
+			</result>
+		</action>
+	</package>
+</xwork>
+
+<!-- END SNIPPET: xworkSample -->

@@ -1,0 +1,18 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+
+<xwork>
+
+	<package name="common" extends="business-default" namespace="/common">
+		<action name="download"
+			class="com.hl95.common.action.DownloadAction">
+			<result name="building">/view/building.jsp</result>
+		</action>
+	
+		
+	</package>
+</xwork>
+
+<!-- END SNIPPET: xworkSample -->
+

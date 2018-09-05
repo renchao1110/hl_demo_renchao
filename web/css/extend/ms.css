@@ -1,0 +1,125 @@
+@CHARSET "UTF-8";
+.panel-body{
+	padding:0px;
+}
+.form-group{
+	margin-bottom:0px;
+	border-bottom:1px solid #efefef;
+}
+.col-md-6 > .form-group{
+	margin-right: 0px;
+	
+}
+
+.row:nth-child(2n) {
+  background-color: #fcfcfc;
+}
+
+.row > .col-md-6:nth-child(2n) {
+  border-left:1px solid #efefef;
+}
+.row:nth-child(2n) > .col-md-6 >  .form-group > div {
+	background-color:#ffffff;
+}
+.form-group > div{
+	padding:15px;
+	border-left:1px solid #efefef;
+}
+.form-body > .row{
+	margin-left:0px;
+	margin-right: 0px;
+}
+.row > .col-md-6{
+	padding-right:0px;
+	padding-right: 0px;
+}
+.form-group > .control-label{
+	padding-top:20px;
+}
+.form-actions{
+	padding:20px 10px;
+	margin:0;
+}
+
+
+.page-bar {
+  padding: 0px;
+  background-color: #f7f7f7;
+  margin-bottom: 25px;
+}
+.page-bar:before, .page-bar:after {
+  content: " ";
+  display: table;
+}
+.page-bar:after {
+  clear: both;
+}
+.page-bar .page-breadcrumb {
+  display: inline-block;
+  float: left;
+  padding: 8px;
+  margin: 0;
+  list-style: none;
+}
+.page-bar .page-breadcrumb > li {
+  display: inline-block;
+}
+.ie8 .page-bar .page-breadcrumb > li {
+  margin-right: 1px;
+}
+.page-bar .page-breadcrumb > li > a,
+.page-bar .page-breadcrumb > li > span {
+  color: #888;
+  font-size: 14px;
+  text-shadow: none;
+}
+.page-bar .page-breadcrumb > li > i {
+  color: #aaa;
+  font-size: 14px;
+  text-shadow: none;
+}
+.page-bar .page-breadcrumb > li > i[class^="icon-"],
+.page-bar .page-breadcrumb > li > i[class*="icon-"] {
+  color: gray;
+}
+.page-bar .page-toolbar {
+  display: inline-block;
+  float: right;
+  padding: 0;
+}
+.page-bar .page-toolbar .btn-fit-height {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.page-container-bg-solid .page-bar {
+  position: relative;
+  padding: 0px 20px;
+  background-color: #ffffff;
+  margin: -25px -20px 0 -20px;
+}
+.page-container-bg-solid .page-bar .page-breadcrumb {
+  padding: 11px 0;
+}
+.page-container-bg-solid .page-bar .page-breadcrumb > li > a,
+.page-container-bg-solid .page-bar .page-breadcrumb > li > span {
+  color: #888;
+}
+.page-container-bg-solid .page-bar .page-breadcrumb > li > i {
+  color: #aaa;
+}
+.page-container-bg-solid .page-bar .page-breadcrumb > li > i[class^="icon-"],
+.page-container-bg-solid .page-bar .page-breadcrumb > li > i[class*="icon-"] {
+  color: #8c8c8c;
+}
+.page-container-bg-solid .page-bar .page-toolbar {
+  padding: 6px 0;
+}
+.page-container-bg-solid .page-bar .page-toolbar .btn {
+  margin-top: -2px;
+}
+.page-container-bg-solid .page-bar .page-toolbar .btn.btn-sm {
+  margin-top: 0px;
+}
+.radio-list{
+	height: 34px;
+}

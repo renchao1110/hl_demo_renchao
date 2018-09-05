@@ -1,0 +1,13 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<!-- START SNIPPET: xworkSample -->
+<xwork>
+	<package name="demo" extends="business-default" namespace="/demo">
+		<action name="demoView" class="com.hl95.demo.action.DemoAction">
+			<result name="success">
+				/view/demo/demoView.jsp
+			</result>
+		</action>
+	</package>
+</xwork>
+<!-- END SNIPPET: xworkSample -->
+

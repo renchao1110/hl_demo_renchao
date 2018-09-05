@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.0</jsp-version>
+	<short-name>hl</short-name>
+	<uri>hl_tag</uri>
+	<description>hl Tag Library Descriptor</description>
+	
+	
+	<tag>
+		<name>createPermission</name>
+		<tag-class>
+			org.pj.framework.business.web.view.CreatePermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+	</tag>
+	<tag>
+		<name>editPermission</name>
+		<tag-class>
+			org.pj.framework.business.web.view.EditPermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+	</tag>
+	<tag>
+		<name>deletePermission</name>
+		<tag-class>
+			org.pj.framework.business.web.view.DeletePermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+	</tag>
+	<tag>
+		<name>notCreatePermission</name>
+		<tag-class>
+			org.pj.framework.business.web.view.NotCreatePermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+	</tag>
+	<tag>
+		<name>notEditPermission</name>
+		<tag-class>
+			org.pj.framework.business.web.view.NotEditPermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+	</tag>
+	<tag>
+		<name>notDeletePermission</name>
+		<tag-class>
+			org.pj.framework.business.web.view.NotDeletePermissionTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>writeHtml tag</description>
+	</tag>
+	<tag>
+		<name>historyToolBar</name>
+		<tag-class>
+			org.pj.framework.business.web.vview.HistoryToolBarTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>historyToolBar tag</description>
+	</tag>
+	<tag>
+		<name>modalPromptBox</name>
+		<tag-class>
+			org.pj.framework.business.web.vview.ModalPromptBoxTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>modalPromptBox tag</description>
+		<attribute>
+			<name>tid</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>tsubBtn</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+			<name>ttitle</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>tmsg</name>
+			<required>false</required>
+		</attribute>
+	</tag>
+	
+	
+</taglib>

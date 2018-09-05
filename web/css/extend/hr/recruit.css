@@ -1,0 +1,69 @@
+.addInfo {
+	background: #fff;
+	border-radius: 5px;
+	width: 65%;
+	height: 90%;
+}
+
+.recruit {
+	width: 100%;
+	height: 92%;
+	overflow: hidden;
+	
+}
+
+.recruit>div {
+	float: left;
+	width: 50%;
+	height: 60%;
+	padding:0px;
+}
+.recruit>div>div {
+	width:325px;
+	height: 136px;
+	margin:18px 15px 18px 30px;
+}
+
+
+.recruit>div>div>p {
+	width: 70px;
+	height: 136px;
+	font-size: 20px;
+	padding: 10px 22px;
+	border-radius: 3px;
+	float: left;
+	border: 1px solid #ccc;
+	border-right: none;
+}
+
+.recruit>div>div>div {
+	width: 253px;
+	height: 136px;
+	border: 1px solid #ccc;
+	float: left;
+}
+
+.recruit>div>div>div>div {
+	height: 45px;
+	padding: 3px 0px 3px 5px;
+}
+
+.recruit>div>div>div>div>input {
+	height: 37px;
+	width:205px;
+}
+
+.cpnyselect {
+	list-style-type: none;
+}
+
+.cpnyselect>li {
+	width: 300px;
+	height: 35px;
+	margin: 20px 0px 20px 0px;
+}
+
+.cpnyselect>li>select>option {
+	width: 200px;
+	height: 29px;
+}

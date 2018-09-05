@@ -1,0 +1,32 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<!-- START SNIPPET: xworkSample -->
+<xwork>
+	<include file="webwork-default.xml" />
+	<package name="business-default" extends="webwork-default"
+		namespace="/business">
+		<default-interceptor-ref name="paramsPrepareParamsStack"></default-interceptor-ref>
+		<global-results>
+			<result name="sessionTimeoutException" type="redirect">/view/common/urlGoLogin.jsp</result>
+			<result name="rootException">/view/error.jsp</result>
+			<result name="ajaxRequest">/view/common/temp.jsp</result>
+			<result name="doPageData">/view/common/temp.jsp</result>
+		</global-results>
+
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception"
+				result="rootException" />
+			<exception-mapping
+				exception="org.pj.framework.business.web.session.UserSessionException"
+				result="sessionTimeoutException" />
+		</global-exception-mappings>
+
+	</package>
+
+	<include file="com/hl95/common/common-servlet.xml" />
+	<include file="com/hl95/sys/sys-servlet.xml" />
+	<include file="com/hl95/login/login-servlet.xml" />
+	<include file="com/hl95/demo/demo-servlet.xml" />
+	<include file="com/hl95/test/user-servlet.xml" />
+</xwork>
+
+<!-- END SNIPPET: xworkSample -->

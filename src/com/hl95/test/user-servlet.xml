@@ -1,0 +1,15 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.1.1//EN" "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<!-- START SNIPPET: xworkSample -->
+<xwork>
+	<package name="user" extends="business-default" namespace="/user">
+		<action name="userView"
+			class="com.hl95.test.action.UserAction">
+			<result name="success">
+				/view/user/user.jsp
+			</result>
+		</action>
+		
+	</package>
+</xwork>
+
+<!-- END SNIPPET: xworkSample -->
